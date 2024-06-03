@@ -5,6 +5,7 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 
 @Entity
@@ -14,7 +15,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
-public class Product {
+public class Product implements BaseModel<Product> {
 
     @Id
     @Column(name = "id")
@@ -27,13 +28,13 @@ public class Product {
     private String description;
 
     @Column(name = "image")
-    private String  image;
+    private String image;
 
     @Column(name = "expiration_date")
     private LocalDate expirationDate;
 
     @Column(name = "quantity")
-    private Integer  quantity;
+    private Integer quantity;
 
     @Column(name = "price")
     private BigDecimal price;
@@ -42,5 +43,18 @@ public class Product {
     @ToString.Exclude
     private Order order;
 
+    @Column(name = "data_cadastro")
+    private LocalDateTime createdAt;
 
+    @Override
+    public Product safeUpdateInfo(Product product) {
+        this.setName(product.getName());
+        this.setDescription(product.getDescription());
+        this.setImage(product.getImage());
+        this.setExpirationDate(product.getExpirationDate());
+        this.setQuantity(product.getQuantity());
+        this.setPrice(product.getPrice());
+        this.setOrder(product.getOrder());
+        return this;
+    }
 }

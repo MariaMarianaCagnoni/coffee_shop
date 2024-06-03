@@ -3,6 +3,7 @@ package br.com.coffeeshopcps.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -12,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Order {
+public class Order implements BaseModel<Order>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,4 +32,14 @@ public class Order {
     @JoinColumn(name = "client_id")
     private Client client;
 
+    @Column(name = "data_cadastro")
+    private LocalDateTime createdAt;
+
+    @Override
+    public Order safeUpdateInfo(Order order) {
+        this.setClient(getClient());
+        this.setProducts(this.getProducts());
+        this.setOrderStatus(this.getOrderStatus());
+        return this;
+    }
 }

@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "employee")
@@ -12,7 +13,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @ToString
-public class Employee {
+public class Employee implements BaseModel<Employee>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,4 +39,17 @@ public class Employee {
     @JoinColumn(name = "address_id",nullable = false)
     private Address address;
 
+    @Column(name = "data_cadastro")
+    private LocalDateTime createdAt;
+
+    @Override
+    public Employee safeUpdateInfo(Employee employee) {
+        this.setName(getName());
+        this.setCpf(employee.getCpf());
+        this.setSalary(employee.getSalary());
+        this.setBankAccount(employee.getBankAccount());
+        this.setCellPhone(employee.getCellPhone());
+        this.setAddress(employee.getAddress());
+        return this;
+    }
 }

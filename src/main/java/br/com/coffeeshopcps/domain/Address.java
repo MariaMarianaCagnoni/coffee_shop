@@ -3,6 +3,8 @@ package br.com.coffeeshopcps.domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "address")
 @NoArgsConstructor
@@ -10,7 +12,7 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-public class Address {
+public class Address implements BaseModel<Address> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,4 +30,25 @@ public class Address {
     @Column(name = "zip_code",nullable = false)
     private String zipCode;
 
+    @OneToOne
+    @JoinColumn(name = "client_id")
+    private Client client;
+
+    @OneToOne
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
+
+    @Column(name = "data_cadastro")
+    private LocalDateTime createdAt;
+
+    @Override
+    public Address safeUpdateInfo(Address address) {
+        this.setCity(address.getCity());
+        this.setStreet(address.getStreet());
+        this.setHouseNumber(address.getHouseNumber());
+        this.setZipCode(address.getZipCode());
+        this.setClient(address.getClient());
+        this.setEmployee(address.getEmployee());
+        return this;
+    }
 }
