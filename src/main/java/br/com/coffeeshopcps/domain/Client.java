@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Client implements BaseModel<Client> {
+public class Client  {
 
     @Id
     @Column(name = "id")
@@ -25,6 +25,12 @@ public class Client implements BaseModel<Client> {
     @Column(name = "cpf",unique = true)
     private String cpf;
 
+    @Column(name = "email",unique = true)
+    private String email;
+
+    @Column(name = "phone",nullable = false)
+    private String phone;
+
     @OneToOne
     @JoinColumn(name = "address_id", nullable = false)
     private Address address;
@@ -32,14 +38,4 @@ public class Client implements BaseModel<Client> {
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)
     private List<Order> orders;
 
-    @Column(name = "data_cadastro")
-    private LocalDateTime createdAt;
-
-    @Override
-    public Client safeUpdateInfo(Client client) {
-        this.setName(client.getName());
-        this.setAddress(client.getAddress());
-        this.setOrders(client.getOrders());
-        return this;
-    }
 }

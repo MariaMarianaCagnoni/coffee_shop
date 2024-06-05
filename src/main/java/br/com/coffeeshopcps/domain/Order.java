@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-public class Order implements BaseModel<Order>{
+public class Order{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,14 +32,5 @@ public class Order implements BaseModel<Order>{
     @JoinColumn(name = "client_id")
     private Client client;
 
-    @Column(name = "data_cadastro")
-    private LocalDateTime createdAt;
 
-    @Override
-    public Order safeUpdateInfo(Order order) {
-        this.setClient(getClient());
-        this.setProducts(this.getProducts());
-        this.setOrderStatus(this.getOrderStatus());
-        return this;
-    }
 }

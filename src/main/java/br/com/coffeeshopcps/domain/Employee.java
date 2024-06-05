@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class Employee implements BaseModel<Employee>{
+public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,24 +32,11 @@ public class Employee implements BaseModel<Employee>{
     @Column(name = "bank_account",nullable = false)
     private String bankAccount;
 
-    @Column(name = "cell_phone",nullable = false)
-    private String cellPhone;
+    @Column(name = "phone",nullable = false)
+    private String phone;
 
     @OneToOne
     @JoinColumn(name = "address_id",nullable = false)
     private Address address;
 
-    @Column(name = "data_cadastro")
-    private LocalDateTime createdAt;
-
-    @Override
-    public Employee safeUpdateInfo(Employee employee) {
-        this.setName(getName());
-        this.setCpf(employee.getCpf());
-        this.setSalary(employee.getSalary());
-        this.setBankAccount(employee.getBankAccount());
-        this.setCellPhone(employee.getCellPhone());
-        this.setAddress(employee.getAddress());
-        return this;
-    }
 }

@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class Product implements BaseModel<Product> {
+public class Product{
 
     @Id
     @Column(name = "id")
@@ -43,18 +43,4 @@ public class Product implements BaseModel<Product> {
     @ToString.Exclude
     private Order order;
 
-    @Column(name = "data_cadastro")
-    private LocalDateTime createdAt;
-
-    @Override
-    public Product safeUpdateInfo(Product product) {
-        this.setName(product.getName());
-        this.setDescription(product.getDescription());
-        this.setImage(product.getImage());
-        this.setExpirationDate(product.getExpirationDate());
-        this.setQuantity(product.getQuantity());
-        this.setPrice(product.getPrice());
-        this.setOrder(product.getOrder());
-        return this;
-    }
 }

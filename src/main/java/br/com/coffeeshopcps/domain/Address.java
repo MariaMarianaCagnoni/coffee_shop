@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @ToString
-public class Address implements BaseModel<Address> {
+public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,17 +38,4 @@ public class Address implements BaseModel<Address> {
     @JoinColumn(name = "employee_id")
     private Employee employee;
 
-    @Column(name = "data_cadastro")
-    private LocalDateTime createdAt;
-
-    @Override
-    public Address safeUpdateInfo(Address address) {
-        this.setCity(address.getCity());
-        this.setStreet(address.getStreet());
-        this.setHouseNumber(address.getHouseNumber());
-        this.setZipCode(address.getZipCode());
-        this.setClient(address.getClient());
-        this.setEmployee(address.getEmployee());
-        return this;
-    }
 }
