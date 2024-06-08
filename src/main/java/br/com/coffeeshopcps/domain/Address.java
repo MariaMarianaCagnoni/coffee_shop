@@ -1,6 +1,7 @@
 package br.com.coffeeshopcps.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -18,16 +19,19 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "city",nullable = false)
+    @NotEmpty(message = "City can't be empty")
+    @Column(name = "city", nullable = false)
     private String city;
 
-    @Column(name = "street",nullable = false)
+    @NotEmpty(message = "Street can't be empty")
+    @Column(name = "street", nullable = false)
     private String street;
 
-    @Column(name = "house_number")
+    @NotEmpty(message = "House number can't be empty")
+    @Column(name = "house_number", nullable = false)
     private String houseNumber;
 
-    @Column(name = "zip_code",nullable = false)
+    @Column(name = "zip_code", nullable = false)
     private String zipCode;
 
     @OneToOne

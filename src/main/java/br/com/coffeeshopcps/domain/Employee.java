@@ -1,7 +1,9 @@
 package br.com.coffeeshopcps.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
+import org.hibernate.validator.constraints.br.CPF;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -20,23 +22,27 @@ public class Employee {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name",nullable = false)
+    @NotEmpty(message = "Name can't be empty or null")
+    @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "cpf",nullable = false,unique = true)
+    @CPF(message = "Invalid CPF")
+    @Column(name = "cpf", nullable = false, unique = true)
     private String cpf;
 
-    @Column(name = "salary",nullable = false)
+    @NotEmpty(message = "Salary can't be empty or null")
+    @Column(name = "salary", nullable = false)
     private BigDecimal salary;
 
-    @Column(name = "bank_account",nullable = false)
+    @NotEmpty(message = "Bank account can't be empty or null")
+    @Column(name = "bank_account", nullable = false)
     private String bankAccount;
 
-    @Column(name = "phone",nullable = false)
+    @Column(name = "phone", nullable = false)
     private String phone;
 
     @OneToOne
-    @JoinColumn(name = "address_id",nullable = false)
+    @JoinColumn(name = "address_id", nullable = false)
     private Address address;
 
 }
