@@ -2,6 +2,8 @@ package br.com.coffeeshopcps.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.*;
 import org.hibernate.validator.constraints.br.CPF;
 
@@ -30,14 +32,15 @@ public class Employee {
     @Column(name = "cpf", nullable = false, unique = true)
     private String cpf;
 
-    @NotEmpty(message = "Salary can't be empty or null")
-    @Column(name = "salary", nullable = false)
+    @NotNull(message = "salary can't be  null")
+    @Column(name = "salary", nullable = false, precision = 10, scale = 2)
     private BigDecimal salary;
 
     @NotEmpty(message = "Bank account can't be empty or null")
     @Column(name = "bank_account", nullable = false)
     private String bankAccount;
 
+    @Pattern(regexp = "^\\([1-9]{2}\\) (?:[2-8]|9[0-9])[0-9]{3}\\-[0-9]{4}$", message = "Phone number is not valid")
     @Column(name = "phone", nullable = false)
     private String phone;
 

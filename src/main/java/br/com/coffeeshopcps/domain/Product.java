@@ -2,7 +2,9 @@ package br.com.coffeeshopcps.domain;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -34,15 +36,15 @@ public class Product {
     @Column(name = "image")
     private String image;
 
-    @NotEmpty(message = "expiration date field can't be empty")
+    @NotNull(message = "expiration date field can't be empty")
     @Column(name = "expiration_date")
     private LocalDate expirationDate;
 
-    @NotEmpty(message = "quantity field can't be empty")
+    @NotNull(message = "quantity field can't be null")
     @Column(name = "quantity")
     private Integer quantity;
 
-    @NotEmpty(message = "price field can't be empty")
+    @NotNull(message = "price field can't be null")
     @Column(name = "price", precision = 10, scale = 2)
     private BigDecimal price;
 

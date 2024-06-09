@@ -35,7 +35,7 @@ public class Client {
     @Column(name = "email", unique = true)
     private String email;
 
-    @Pattern(regexp = "^\\([1-9]{2}\\) (?:[2-8]|9[0-9])[0-9]{3}\\-[0-9]{4}$\n", message = "Phone number is not valid")
+    @Pattern(regexp = "^\\([1-9]{2}\\) (?:[2-8]|9[0-9])[0-9]{3}\\-[0-9]{4}$", message = "Phone number is not valid")
     @Column(name = "phone", nullable = false)
     private String phone;
 
