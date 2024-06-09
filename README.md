@@ -1,11 +1,4 @@
 # Coffee Shop Campinas
-<fig>
-<img src="https://rockcontent.com/br/wp-content/uploads/sites/2/elementor/thumbs/modelo-de-projeto-p2he6clp7uhmwqd16ikv9jgz30a5liixoon908hej0.png" alt="Uma imagem relacionada ao projeto">
-<figcaption>Uma imagem relacionada ao projeto</figcaption>
-</fig>
-
-## Inicialização
-Para executar o projeto, utilize as ferramentas descritas na sessão *Ferramentas*.
 
 ## Ferramentas
 * [IntelliJ](https://www.jetbrains.com/idea/) - IDE para desenvolvimento.
@@ -17,28 +10,6 @@ Para executar o projeto, utilize as ferramentas descritas na sessão *Ferramenta
 * [Spring Boot Rest API](https://medium.com/better-programming/building-a-spring-boot-rest-api-a-php-developers-view-part-i-6add2e794646) -  API com Spring Boot.
 * Para acessar o projeto em produção clique [aqui.]()
 # < Coffee Shop Campinas>
-
-## Introdução
-
-> É interessante colocar aqui uma visão bem geral, aquilo que você falaria em uma reunião rápida.  
-> Vai ser a resposta que você da pra sua tia quando ela pergunta o que está fazendo da vida.
-
-Este projeto possui o objetivo principal **< descreva o objetivo principal >**.  
-Com os objetivos gerais de realizar a inserção de **< objeto >** e verificação de **< objeto >**.
-
-## Análise técnica
-
-### Descrição do ambiente técnico
-
-O sistema é composto por um banco de dados, uma interface web e um sistema embarcado. Funcionalidades principais:
-> Indique os grandes blocos do sistema.
-
-* **F1** - Nome da funcionalidade 1.
-* **F2** - Nome da funcionalidade 2.
-* **F3** - Nome da funcionalidade 3.
-> Coloque somente o nome principal, por exemplo: Controle de usuários.
-
-As ferramentas utilizadas para o desenvolvimento incluem **< linguagem para back-end >** que é uma linguagem de programação utilizada para o Back-end, para front-end foi utilizado **< linguagem para o front-end >** . **< Banco de dados >** atuando como sistema gerenciador de banco de dados relacional e **< gerenciador de container >** para utilizar o ambiente em container.
 
 
 ### Requisitos Funcionais
@@ -62,7 +33,6 @@ _Mudança/cancelamento do pedido_
 
 **RGN2** - O cliente poderá deletar ou alterar o pedido, contanto que esteja devidadamente logado no sistema com seu email e senha.
 
-> As regras de negócio estão relacionadas as dependencias do sistema, por exemplo "depois de x tempo" ou "para clientes de x perfil".
 
 ## DER
 
@@ -72,7 +42,6 @@ _Mudança/cancelamento do pedido_
 
 <a data-flickr-embed="true" href="https://www.flickr.com/photos/200770519@N03/53757582498/in/dateposted-public/" title="DER"><img src="https://live.staticflickr.com/65535/53757582498_27ab7091f4_w.jpg" width="400" height="191" alt="DER"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>">
 
-> Imagine que fosse necessário enviar um email sempre que realizado o login, esse email deveria estar no fluxograma. Esse fluxograma pode ser mais simples, apenas com o objetivo de validar com o cliente que as dependências de negócio estão validadas em cada caso de negócio.
 
 ## Mapa dos Endpoints.
 
