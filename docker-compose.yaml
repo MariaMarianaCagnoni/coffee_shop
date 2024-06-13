@@ -4,7 +4,7 @@ services:
     container_name: coffeeshop_container
     image: postgres:13-alpine
     environment:
-      - POSTGRES_USER= user
+      - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=2easy2forget
       - POSTGRES_DB=coffeeshop_db
     volumes:
