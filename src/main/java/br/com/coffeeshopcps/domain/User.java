@@ -3,7 +3,6 @@ package br.com.coffeeshopcps.domain;
 
 import br.com.coffeeshopcps.validators.Password;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import lombok.*;
 
 @NoArgsConstructor
@@ -19,9 +18,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Email
+
     @Column(name = "user_name",unique = true)
-    private String userNameEmail;
+    private String userName;
 
     @Password
     @Column(name = "password")
