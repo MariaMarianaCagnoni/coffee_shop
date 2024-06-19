@@ -20,9 +20,6 @@ Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
 * **RF3** - Clientes poderão criar/alterar/deletar seus pedidos
 * **RF3** - Clientes poderão criar/alterar/deletar suas informações de cadastro.
 
-
-> O requisito funcional está relacinado as funcionalidades citadas. Por exemplo "Geração de relatório de determinado período de vendas". [Verifique mais detalhes aqui](https://codificar.com.br/requisitos-funcionais-nao-funcionais/).
-
 ## Regras de Negócio
 
 _Pedido_
