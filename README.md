@@ -7,7 +7,7 @@ Projeto que visa a criação de um site completo  de Coffee shop.
 * [Docker](https://www.docker.com/) - Container para subir o banco
 * [Postgres](https://www.postgresql.org/) - Banco usado em produção
 * [H2 database](https://www.h2database.com/html/main.html) - Banco usado em ambiente de desenvolvimento
-* [Angular](https://angular.dev/)
+* [Angular](https://angular.dev/) - Framework utilizado para construir o frontend
 
 ## Links importantes
 * [Spring Boot Rest API](https://medium.com/better-programming/building-a-spring-boot-rest-api-a-php-developers-view-part-i-6add2e794646) -  API com Spring Boot.
