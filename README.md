@@ -1,10 +1,13 @@
 # Coffee Shop Campinas
 
+Projeto que visa a criação de um site completo  de Coffee shop.
+
 ## Ferramentas
 * [IntelliJ](https://www.jetbrains.com/idea/) - IDE para desenvolvimento.
 * [Docker](https://www.docker.com/) - Container para subir o banco
 * [Postgres](https://www.postgresql.org/) - Banco usado em produção
 * [H2 database](https://www.h2database.com/html/main.html) - Banco usado em ambiente de desenvolvimento
+* [Angular](https://angular.dev/) - Framework utilizado para construir o frontend
 
 ## Links importantes
 * [Spring Boot Rest API](https://medium.com/better-programming/building-a-spring-boot-rest-api-a-php-developers-view-part-i-6add2e794646) -  API com Spring Boot.
@@ -19,9 +22,6 @@ Respeitando a proposta, o sistema deverá atender os seguintes requisitos:
 * **RF2** - Funcionários poderão cadastrar/alterar/deletar/buscar produtos do sistema.
 * **RF3** - Clientes poderão criar/alterar/deletar seus pedidos
 * **RF3** - Clientes poderão criar/alterar/deletar suas informações de cadastro.
-
-
-> O requisito funcional está relacinado as funcionalidades citadas. Por exemplo "Geração de relatório de determinado período de vendas". [Verifique mais detalhes aqui](https://codificar.com.br/requisitos-funcionais-nao-funcionais/).
 
 ## Regras de Negócio
 
