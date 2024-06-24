@@ -40,7 +40,6 @@ public class Client {
     private String phone;
 
     @OneToOne
-    @JoinColumn(name = "address_id", nullable = false)
     private Address address;
 
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL)

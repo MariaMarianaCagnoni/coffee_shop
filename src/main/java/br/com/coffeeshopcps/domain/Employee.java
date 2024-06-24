@@ -45,7 +45,6 @@ public class Employee {
     private String phone;
 
     @OneToOne
-    @JoinColumn(name = "address_id", nullable = false)
     private Address address;
 
 }

@@ -35,11 +35,9 @@ public class Address {
     private String zipCode;
 
     @OneToOne
-    @JoinColumn(name = "client_id")
     private Client client;
 
     @OneToOne
-    @JoinColumn(name = "employee_id")
     private Employee employee;
 
 }
