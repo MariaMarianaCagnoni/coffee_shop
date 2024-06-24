@@ -40,9 +40,7 @@ _Mudança/cancelamento do pedido_
 
 
 
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/200770519@N03/53757582498/in/dateposted-public/" title="DER"><img src="https://live.staticflickr.com/65535/53757582498_27ab7091f4_w.jpg" width="400" height="191" alt="DER"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>">
-
-
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/200770519@N03/53757582498/in/dateposted-public/" title="DER"><img src="https://live.staticflickr.com/65535/53757582498_27ab7091f4_w.jpg" width="400" height="191" alt="DER"/></a>
 ## Mapa dos Endpoints.
 
 
