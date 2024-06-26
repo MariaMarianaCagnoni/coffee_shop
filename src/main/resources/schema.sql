@@ -56,6 +56,7 @@ CREATE TABLE product
     CONSTRAINT fk_order FOREIGN KEY (order_id) REFERENCES orders (id)
 );
 
+
 -- Criando a tabela users
 CREATE TABLE users
 (
